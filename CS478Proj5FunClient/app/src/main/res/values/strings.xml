@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">CS478Proj5FunClient</string>
+    <string name="picture">Picture Number:</string>
+    <string name="download">Download</string>
+    <string name="request">Request Picture</string>
+    <string name="display_picture">Display Pic</string>
+    <string name="audio_number">Audio Number:</string>
+    <string name="stop">Stop</string>
+    <string name="pause">Pause</string>
+    <string name="play">Play</string>
+    <string name="resume">Resume</string>
+    <string name="erase">Erase</string>
+</resources>

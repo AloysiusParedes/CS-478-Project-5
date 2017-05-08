@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.com.cs478proj5funclient.CS478Proj5ServiceUser">
+
+    <TextView
+        android:id="@+id/picLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/picNumberText"
+        android:layout_alignBottom="@+id/picNumberText"
+        android:layout_alignParentStart="true"
+        android:labelFor="@+id/picNumberText"
+        android:text="@string/picture"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/picNumberText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/displayPictureButton"
+        android:layout_alignBottom="@+id/displayPictureButton"
+        android:layout_toEndOf="@+id/picLabel"
+        android:layout_toStartOf="@+id/displayPictureButton"
+        android:ems="10"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/audioNumberText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/picNumberText"
+        android:layout_below="@+id/displayPictureButton"
+        android:layout_toStartOf="@+id/displayPictureButton"
+        android:ems="10"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/displayPictureButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:onClick="displayPicture"
+        android:text="@string/display_picture"
+        tools:ignore="RelativeOverlap" />
+
+    <ImageView
+        android:id="@+id/picture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/pauseButton"
+        android:layout_toEndOf="@+id/picLabel"
+        android:contentDescription="@string/picture"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/audioLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/audioNumberText"
+        android:layout_alignBottom="@+id/audioNumberText"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/audioNumberText"
+        android:labelFor="@+id/audioNumberText"
+        android:text="@string/audio_number"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+
+    <Button
+        android:id="@+id/playButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignStart="@+id/displayPictureButton"
+        android:layout_below="@+id/displayPictureButton"
+        android:layout_toEndOf="@+id/audioNumberText"
+        android:onClick="playAudio"
+        android:text="@string/play" />
+
+    <Button
+        android:id="@+id/pauseButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/audioNumberText"
+        android:onClick="pauseAudio"
+        android:text="@string/pause" />
+
+    <Button
+        android:id="@+id/resumeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/stopButton"
+        android:layout_alignBottom="@+id/stopButton"
+        android:layout_toStartOf="@+id/stopButton"
+        android:onClick="resumeAudio"
+        android:text="@string/resume" />
+
+    <Button
+        android:id="@+id/stopButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/pauseButton"
+        android:layout_alignBottom="@+id/pauseButton"
+        android:layout_toStartOf="@+id/pauseButton"
+        android:onClick="stopAudio"
+        android:text="@string/stop" />
+
+    <ListView
+        android:id="@+id/requestsListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/eraseButton"
+        android:layout_toStartOf="@+id/picture" />
+
+    <Button
+        android:id="@+id/eraseButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/resumeButton"
+        android:layout_alignBottom="@+id/resumeButton"
+        android:layout_alignParentStart="true"
+        android:onClick="eraseList"
+        android:text="@string/erase"
+        android:textStyle="bold" />
+</RelativeLayout>
